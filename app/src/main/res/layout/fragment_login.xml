@@ -23,14 +23,17 @@
             android:layout_height="wrap_content"
             android:text="E-mail"
             android:textColor="#283593" />
+
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email@email.com"
-            android:textSize="14sp"
             android:layout_margin="8dp"
             android:background="@drawable/bg_edit"
-            android:padding="14dp"/>
+            android:hint="email@email.com"
+            android:inputType="textEmailAddress"
+            android:padding="14dp"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -38,17 +41,21 @@
             android:layout_marginTop="16dp"
             android:text="Senha"
             android:textColor="#283593" />
+
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="senha"
-            android:textSize="14sp"
             android:layout_margin="8dp"
             android:background="@drawable/bg_edit"
-            android:padding="14dp"/>
+            android:hint="senha"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="14sp" />
 
         <Button
 
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -57,9 +64,8 @@
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="@color/color_default"
-            app:backgroundTint="@null"
 
-            />
+            app:backgroundTint="@null" />
 
 
 
@@ -92,7 +98,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:indeterminateTint="@color/white"></ProgressBar>
 
 
     </LinearLayout>
