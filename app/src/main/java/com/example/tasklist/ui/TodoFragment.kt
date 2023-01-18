@@ -24,15 +24,10 @@ class TodoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTodoBinding.inflate(inflater, container, false)
-        return rootView
+        _binding = FragmentTodoBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
