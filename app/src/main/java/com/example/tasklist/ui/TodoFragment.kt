@@ -25,29 +25,7 @@ class TodoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentTodoBinding.inflate(inflater, container, false)
-        val rootView = _binding?.root
-        val button = rootView?.findViewById<Button>(R.id.btnRequest)
-
-        button?.setOnClickListener {
-            val serviceSinesp = ServiceSinesp.buildService(ApiService::class.java)
-            val call = serviceSinesp.getPost()
-            call.enqueue(object : Callback<MutableList<PostModel>> {
-                override fun onResponse(
-                    call: Call<MutableList<PostModel>>,
-                    response: Response<MutableList<PostModel>>
-                ) {
-                    if (response.isSuccessful) {
-                        Log.e("Sucesso", response.body().toString())
-                    }
-                }
-
-                override fun onFailure(call: Call<MutableList<PostModel>>, t: Throwable) {
-                    t.printStackTrace()
-                    Log.e("Erro", t.message.toString())
-                }
-            })
-        }
-        return rootView!!
+        return rootView
     }
 
 
