@@ -3,8 +3,8 @@ package com.example.tasklist.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
-import com.example.tasklist.R
 import com.example.tasklist.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
     }
