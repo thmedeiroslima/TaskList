@@ -1,15 +1,15 @@
 package com.example.tasklist.ui
 
-import com.example.tasklist.R
+
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.tasklist.databinding.FragmentTodoBinding
+import com.example.tasklist.ui.apiBrasil.PlacaRequest
+import com.example.tasklist.ui.apiBrasil.PlacaResponse
+import com.example.tasklist.ui.apiBrasil.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,6 +28,27 @@ class TodoFragment : Fragment() {
         return binding.root
     }
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val apiService = RetrofitClient.getService()
+        val request = PlacaRequest("OAE2911")
+        val call = apiService.consultaPlaca(request)
+
+        call.enqueue(object : Callback<PlacaResponse> {
+            override fun onResponse(call: Call<PlacaResponse>, response: Response<PlacaResponse>) {
+                if (response.isSuccessful) {
+                    val placaResponse = response.body()
+                    // faça algo com a resposta
+                    println(placaResponse)
+                }
+            }
+            override fun onFailure(call: Call<PlacaResponse>, t: Throwable) {
+                // trate a falha
+            }
+        })
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
