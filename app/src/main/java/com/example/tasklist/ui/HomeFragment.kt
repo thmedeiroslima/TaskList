@@ -54,7 +54,9 @@ class HomeFragment : Fragment() {
         val adapter = ViewPagerAdapter(requireActivity())
         binding.viewPager.adapter = adapter
 
-        adapter.addFragment(TodoFragment(),"teste")
+        adapter.addFragment(TodoFragment(),"A fazer")
+        adapter.addFragment(TodoFragment(),"Fazendo")
+        adapter.addFragment(TodoFragment(),"A Feito")
 
         binding.viewPager.offscreenPageLimit = adapter.itemCount
 

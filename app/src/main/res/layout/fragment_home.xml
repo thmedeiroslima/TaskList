@@ -24,12 +24,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/color_default"
                 android:elevation="0dp"
-                app:layout_constraintBaseline_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ibLogout"
+                app:layout_constraintEnd_toStartOf="@id/ibLogout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:tabIndicatorColor="@color/white"
                 app:tabTextAppearance="@style/CustomTabLayout"
                 app:tabTextColor="@color/white" />
+
+
 
             <ImageButton
                 android:id="@+id/ibLogout"
