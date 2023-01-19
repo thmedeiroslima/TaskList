@@ -31,7 +31,7 @@ class TodoFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+//###############################Consulta API Brasil################################################
         val apiService = RetrofitClient.getService()
         val request = PlacaRequest("OAE2911")
         val call = apiService.consultaPlaca(request)
@@ -48,6 +48,7 @@ class TodoFragment : Fragment() {
                 // trate a falha
             }
         })
+//###############################Consulta API Brasil################################################
     }
     override fun onDestroyView() {
         super.onDestroyView()
