@@ -57,9 +57,12 @@
             android:label="fragment_recovery_account"
             tools:layout="@layout/fragment_recovery_account" />
         <action
-            android:id="@+id/action_global_homeFragment2"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_global_camActivity"
+            app:destination="@id/camActivity" />
     </navigation>
+    <activity
+        android:id="@+id/camActivity"
+        android:name="com.example.tasklist.ui.CamActivity"
+        android:label="activity_cam"
+        tools:layout="@layout/activity_cam" />
 </navigation>

@@ -1,15 +1,24 @@
 package com.example.tasklist.ui
 
 
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.tasklist.R
 import com.example.tasklist.databinding.FragmentTodoBinding
 import com.example.tasklist.ui.apiBrasil.PlacaRequest
 import com.example.tasklist.ui.apiBrasil.PlacaResponse
 import com.example.tasklist.ui.apiBrasil.RetrofitClient
+import kotlinx.android.synthetic.main.activity_cam.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +28,7 @@ class TodoFragment : Fragment() {
 
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,7 +59,9 @@ class TodoFragment : Fragment() {
             }
         })
 //###############################Consulta API Brasil################################################
+
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

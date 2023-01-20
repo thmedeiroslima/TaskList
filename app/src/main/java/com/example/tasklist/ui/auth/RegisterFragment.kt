@@ -67,7 +67,7 @@ class RegisterFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_global_homeFragment2)
+                    findNavController().navigate(R.id.action_global_camActivity)
                 } else {
                     binding.progressBar.isVisible = false
                 }

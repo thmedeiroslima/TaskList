@@ -13,6 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_cam.*
 
 
 class HomeFragment : Fragment() {
@@ -22,11 +23,14 @@ class HomeFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -50,6 +54,11 @@ class HomeFragment : Fragment() {
         auth.signOut()
         findNavController().navigate(R.id.action_homeFragment_to_authentication)
     }
+
+/*    private fun openCam(){
+
+        findNavController().navigate(R.id.action_splashFragment_to_camActivity)
+    }*/
     private fun configTablayout() {
         val adapter = ViewPagerAdapter(requireActivity())
         binding.viewPager.adapter = adapter

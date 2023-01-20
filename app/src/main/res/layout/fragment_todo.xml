@@ -6,11 +6,28 @@
     tools:context=".ui.TodoFragment">
 
 
-<Button
-    android:id="@+id/btnRequest"
-    android:text="Buscar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_busca"
+            android:text="Buscar" />
+
+        <Button
+            android:id="@+id/btnCaptura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRequest"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_open_cam"
+            android:text="Captura" />
+
+    </RelativeLayout>
+
 
 </FrameLayout>
