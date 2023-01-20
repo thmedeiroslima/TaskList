@@ -22,4 +22,14 @@
         android:layout_centerInParent="true"
         android:text="Take a Picture" />
 
+
+    <ImageButton
+        android:id="@+id/ibLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_logout" />
+
 </RelativeLayout>

@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
 
     <application
         android:allowBackup="true"
@@ -16,7 +20,7 @@
         android:theme="@style/Theme.TaskList"
         tools:targetApi="31">
         <activity
-            android:name=".CamActivity"
+            android:name=".ui.CamActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
@@ -31,7 +35,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".ui.CamActivity" />
     </application>
 
 </manifest>
