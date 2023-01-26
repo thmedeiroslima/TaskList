@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_splashFragment_to_camActivity"
             app:destination="@id/camActivity" />
+        <action
+            android:id="@+id/action_splashFragment_to_capturarPlaca"
+            app:destination="@id/capturarPlaca" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -68,4 +71,9 @@
         android:name="com.example.tasklist.ui.CamActivity"
         android:label="activity_cam"
         tools:layout="@layout/activity_cam" />
+    <activity
+        android:id="@+id/capturarPlaca"
+        android:name="com.example.tasklist.ui.CapturarPlaca"
+        android:label="activity_capturar_placa"
+        tools:layout="@layout/activity_capturar_placa" />
 </navigation>

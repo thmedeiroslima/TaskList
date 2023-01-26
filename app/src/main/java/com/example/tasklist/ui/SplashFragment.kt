@@ -39,7 +39,7 @@ class SplashFragment : Fragment() {
         if(auth.currentUser == null) {
             findNavController().navigate(R.id.action_splashFragment_to_authentication)
         }else{
-            findNavController().navigate(R.id.action_splashFragment_to_camActivity)
+            findNavController().navigate(R.id.action_splashFragment_to_capturarPlaca)
         }
 
     }

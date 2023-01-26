@@ -76,7 +76,7 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_global_camActivity)
+                    findNavController().navigate(R.id.camActivity)
                 } else {
                     binding.progressBar.isVisible = false
                 }

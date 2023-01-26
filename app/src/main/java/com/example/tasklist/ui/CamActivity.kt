@@ -78,13 +78,11 @@ class CamActivity : AppCompatActivity() {
         if (requestCode == 101){
             var picture: Bitmap? = data?.getParcelableExtra("data")
             img_view.setImageBitmap(picture)
-//####Reconhecimento de texto####
+
             tesseract.setImage(picture) // setando a imagem para o tesseract
             val result = tesseract.utF8Text // obtendo o texto reconhecido
 
             Log.d("Tesseract", "Texto reconhecido: $result")
-
-//####Reconhecimento de texto####
 
             val state = Environment.getExternalStorageState()
                 if (Environment.MEDIA_MOUNTED != state) {
